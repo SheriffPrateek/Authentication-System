@@ -5,9 +5,7 @@ const model=require('../Model/Schema');
 const CheckUser= async function(req,resp){        
     const username=req.query.username;
     const password=req.query.password;
-    console.log(username);
     const user=await model.findOne({"User":username,"Password":password});
-   
     return user;   
 }
 
